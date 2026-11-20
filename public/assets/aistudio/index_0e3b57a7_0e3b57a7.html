@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RoadLens: Bayombong and Solano</title>
+<link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header>
+  <h1>RoadLens</h1><span class="mu" id="mapName">Loading…</span><span id="clk" class="clk">06:00</span><span id="mood">😀</span>
+  <span class="grow"></span>
+  <button id="bSave">Save project</button><button id="bGeo">Export GeoJSON</button><button id="bLoad">Load file</button><input id="fi" type="file" accept=".json,.geojson" hidden><button id="bClear">Clear all</button>
+</header>
+<div id="body"><main id="stage">
+  <canvas id="map"></canvas>
+  <div id="legendBox"><div><b>Congestion</b></div><div><span class="sw" style="background:hsl(120,85%,48%)"></span>free flow</div><div><span class="sw" style="background:hsl(55,85%,48%)"></span>slowing</div><div><span class="sw" style="background:hsl(0,85%,48%)"></span>jammed</div>
+    <div class="vl"><b>Vehicles</b></div><div id="vleg"></div></div>
+  <div id="wbBar" hidden><span><b>Workbench</b> · editing a copy of this area. The town map is not changing.</span><button id="wbApply" class="primary">Apply to town</button><button id="wbDiscard">Discard</button></div>
+  <div id="zoom"><button id="zin" aria-label="Zoom in">+</button><button id="zout" aria-label="Zoom out">−</button></div>
+  <div id="scale"><div id="scaleBar"></div><span id="scaleTxt"></span></div>
+</main>
+<aside id="side"></aside></div>
+<script type="module" src="src/main.js"></script>
+</body></html>
